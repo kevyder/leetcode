@@ -1,3 +1,4 @@
+# 14. Longest Common Prefix
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         prefix = ""
