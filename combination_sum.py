@@ -4,7 +4,7 @@ class Solution:
         results = []
         candidates_size = len(candidates)
 
-        def dfs(current_index: int, current_combination: list, total: int) -> None:
+        def dfs(current_index: int, current_combination: list = [], total: int = 0) -> None:
             if total == target:
                 results.append(current_combination.copy())
                 return
@@ -22,6 +22,6 @@ class Solution:
             current_combination.pop()
             dfs(current_index + 1, current_combination, total)
 
-        dfs(0, [], 0)
+        dfs(0)
 
         return results
